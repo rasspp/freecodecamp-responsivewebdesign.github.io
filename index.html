@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <style>
+         #navbar {
+            position: fixed;
+            display: flex;
+         }
+         @media (max-width: 767px) {
+            #navbar {
+               box-sizing: border-box;
+            }
+            .nav-link-container.active {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               padding-top: 200px;
+               padding-bottom: 100px;
+            }
+         }
+      </style>
+   </head>
+   <body class="bg-zinc-400 flex justify-center flex-col">
+      <main id="main-doc" class="container w-full md:w-6/12 flex justify-center items-center flex-col mx-auto bg-red-400 text-white">
+         <header id="header" class="flex justify-center">
+            <nav id="navbar" class="justify-between px-28 py-5 bg-red-400 shadow-md text-red-200 font-bold tracking-normal w-full z-10">
+               <header class="hover:text-red-300">Rass</header>
+               <a href="#" class="hover:text-red-300"></a>
+               <div class="nav-link-container gap-9 hidden md:flex w-full md:w-5/12 text-center">
+                  <a href="#main_content" class="nav-link hover:text-red-300 border-b-2 md:border-none w-full md:w-auto whitespace-nowrap">Main Content</a>
+                  <a href="#list_code" class="nav-link hover:text-red-300 border-b-2 md:border-none w-full md:w-auto whitespace-nowrap">List Code</a>
+                  <a href="#list_li" class="nav-link hover:text-red-300 border-b-2 md:border-none w-full md:w-auto whitespace-nowrap">List li</a>
+                  <a href="#contact_me" class="nav-link hover:text-red-300 border-b-2 md:border-none w-full md:w-auto whitespace-nowrap">Contact Me</a>
+                  <a href="#footer" class="nav-link hover:text-red-300 border-b-2 md:border-none w-full md:w-auto whitespace-nowrap">Footer</a>
+               </div>
+
+               <button
+                  class="block md:hidden max-h-8 bg-red-500 rounded-md px-4 py-1 hover:bg-red-600 active:bg-red-500 cursor-pointer"
+                  onclick="hamburgerMenu()"
+               >
+                  Click
+               </button>
+            </nav>
+
+            <section id="welcome-section" class="w-10/12 flex flex-wrap justify-center mt-40">
+               <h1 id="title" class="w-full text-center text-white font-bold text-2xl">My Name is Ridho Akbar</h1>
+               <p id="description">I am a Frontend Web Developer</p>
+               <div id="img-div" class="text-red-600 font-bold bg-red-500 text-center px-2 pb-5 mt-5 rounded-md">
+                  <img id="image" src="https://placeholder.com/600x400" alt="header image" class="w-full mt-5 rounded-md" />
+                  <div id="img-caption" class="text-red-200 py-2 px-1 mt-2 w-full bg-red-400 rounded-md">
+                     Mesmerizing mountains and a serene river – nature's perfect symphony.
+                  </div>
+                  <p id="tribute-info" class="my-3 p-2 bg-red-400 rounded-md py-5">
+                     Amidst majestic mountains and a serene river, nature's perfect symphony unfolds, inviting awe and introspection in the embrace of
+                     breathtaking beauty. Explorers find solace in this idyllic sanctuary.
+                  </p>
+                  <a id="tribute-link" href="#" target="_blank" class="bg-red-400 py-1 px-4 rounded-md hover:text-red-200">visit to here.</a>
+               </div>
+            </section>
+         </header>
+
+         <section class="flex items-center flex-col w-full pt-5 mt-10">
+            <h2 class="w-10/12 text-center font-bold text-2xl pb-4 border-b-2 uppercase">Video</h2>
+
+            <video id="video" controls class="w-10/12 mt-3 mb-7 rounded-md">
+               <source src="https://www.youtube.com/watch?v=wruso7u1PcI&list=PLRKMmwY3-5MwC02nYlx4kgyNO0fRvPdDc&index=11" class="h-10" />
+            </video>
+         </section>
+
+         <form
+            id="survey-form"
+            action="https://www.freecodecamp.com/email-submit"
+            class="w-10/12 flex flex-col items-start bg-red-500 py-5 my-10 rounded-md pl-8 text-red-500"
+         >
+            <h2 class="w-11/12 text-center text-white font-bold text-2xl pb-4 mb-2 uppercase border-b-2">Login</h2>
+            <label id="name-label" for="name">Name: </label>
+            <input
+               id="name"
+               type="text"
+               placeholder="Write your full name"
+               name="name"
+               required
+               class="rounded-md px-4 py-1 my-0.5 w-11/12 focus:font-semibold outline-none focus:outline outline-offset-0 outline-4 focus:outline-red-400 ease-in duration-300"
+            />
+            <label id="email-label" for="email">Email: </label>
+            <input
+               id="email"
+               type="email"
+               placeholder="Write your Email address"
+               name="email"
+               required
+               class="rounded-md px-4 py-1 my-0.5 w-11/12 focus:font-semibold outline-none focus:outline outline-offset-0 outline-4 focus:outline-red-400 ease-in duration-300"
+            />
+            <label id="password-label" for="password">Password: </label>
+            <input
+               id="password"
+               type="password"
+               placeholder="Needed password too"
+               name="password"
+               class="rounded-md px-4 py-1 my-0.5 w-11/12 focus:font-semibold outline-none focus:outline outline-offset-0 outline-4 focus:outline-red-400 ease-in duration-300"
+            />
+            <label id="number-label" for="number">Number: </label>
+            <input
+               id="number"
+               type="number"
+               placeholder="Value your handsomeness"
+               name="number"
+               min="0"
+               max="10"
+               class="rounded-md px-4 py-1 my-0.5 w-11/12 focus:font-semibold outline-none focus:outline outline-offset-0 outline-4 focus:outline-red-400 ease-in duration-300"
+            />
+            <!-- <select id="dropdown" class="mt-5 text-red-500 px-4 py-1 rounded-md font-bold">
+               <option value="Register">Register</option>
+               <option value="Login">Login</option>
+            </select> -->
+            <!-- 
+            <div class="text-white accent-red-400 mt-5 flex flex-col">
+               <div>
+                  <input id="myName" type="radio" value="Ridho" name="important names" class="text-red-500 border-2" />
+                  <label for="myName">Ridho</label>
+               </div>
+               <div>
+                  <input id="shilva" type="radio" value="Shilva" name="important names" />
+                  <label for="shilva">Shilva</label>
+               </div>
+               <div>
+                  <input id="salsa" type="radio" value="Salsa" name="important names" />
+                  <label for="salsa">Salsa</label>
+               </div>
+               <div>
+                  <input id="pebriani" type="radio" value="Pebriani" name="important names" />
+                  <label for="pebriani">Pebriani</label>
+               </div>
+            </div> -->
+
+            <!--             
+            <div class="text-white mt-5">
+               <input id="true" type="checkbox" value="name" />
+               <label for="true">True </label>
+               <input id="false" type="checkbox" value="name" />
+               <label for="false">False</label>
+            </div> -->
+
+            <textarea
+               name=""
+               id=""
+               class="w-11/12 h-32 mt-5 rounded-md p-2 focus:font-bold text focus:border focus:border-red-500 ease-in duration-[0.1s]"
+               placeholder="Enter your last words"
+            ></textarea>
+
+            <input id="submit" type="submit" class="bg-red-400 hover:bg-red-600 text-white font-semibold px-4 py-1 rounded-md mt-5 ease-in duration-[0.1s]" />
+         </form>
+
+         <section id="projects" class="w-11/12 flex justify-center flex-wrap">
+            <h2 class="project-tile w-11/12 text-center text-white font-bold text-2xl pb-4 mb-4 uppercase border-b-2">Card</h2>
+
+            <div id="card" class="container-card w-full md:w-5/12 px-5 mb-3 md:mb-0">
+               <div class="card bg-red-500 rounded-md overflow-hidden">
+                  <img src="https://placeholder.com/400x200" alt="img-card" class="w-full" />
+                  <div class="p-2">
+                     <p class="leading-5 mb-5">This is the paragraf tag p of card</p>
+                     <a id="profile-link" class="bg-red-400 px-4 py-1 rounded-md hover:bg-red-600 mt-3" target="_blank">Submit</a>
+                  </div>
+               </div>
+            </div>
+
+            <div class="container-card w-full md:w-5/12 px-5 mb-3 md:mb-0">
+               <div class="card bg-red-500 rounded-md overflow-hidden">
+                  <img src="https://placeholder.com/400x200" alt="img-card" class="w-full" />
+                  <div class="p-2">
+                     <p class="leading-5 mb-5">This is the paragraf tag p of card</p>
+                     <a class="bg-red-400 px-4 py-1 rounded-md hover:bg-red-600 mt-3" target="_blank">Submit</a>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <footer class="bg-red-400 mt-14 py-10">Redesign by Ridho Akbar in 2023</footer>
+      </main>
+
+      <script>
+         const navLinkContainer = document.querySelector(".nav-link-container");
+         const hamburgerMenu = (e) => {
+            navLinkContainer.classList.toggle("active");
+         };
+      </script>
+   </body>
+</html>
